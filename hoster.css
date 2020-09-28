@@ -724,6 +724,7 @@ sub {
 .plan-down {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .basic {
@@ -853,6 +854,10 @@ sub {
     display: inline-block;
     border-radius: 3px;
     border: 1px solid var(--theme-color);
+    transition: 0.5s ease-out;
+}
+.plan-post .buy-btn a:hover {
+    transform:translateY(-5px);
 }
 /*End plan container*/
 
@@ -1248,8 +1253,35 @@ sub {
 }
 /*end support container*/
 
+/*start move btn*/
+#movetop {
+    display: block;
+    position: fixed;
+    bottom: 75px;
+    right: 15px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    background: #051b35;
+    padding: 0;
+    line-height: 36px;
+    border-radius: 4px;
+    transition: 0.5s ease-out;
+}
+
+#movetop:hover {
+    transform:translateY(-5px); 
+    background-color: var(--theme-color);
+}
+/*End move btn*/
+
 /*Start responsive part*/
-@media only screen  and (max-width:480px)
+@media only screen  and (max-width:992px)
 {
     .header .topHeader-left  {
         width:100%;
@@ -1388,11 +1420,11 @@ sub {
         font-size: 35px;
         margin-bottom: 40px;
     }
-    .basic ,.Premium ,.pro {
+    .basic {
         width:100%;
         margin: 20px 0;
     }
-    .plan-post .Premium .recommend {
+    .plan-post .basic .recommend {
         width:60%;
     }
     .main-container {
@@ -1609,11 +1641,11 @@ sub {
         font-size: 35px;
         margin-bottom: 40px;
     }
-    .basic ,.Premium ,.pro {
+    .basic {
         width:100%;
         margin: 20px 0;
     }
-    .plan-post .Premium .recommend {
+    .plan-post .basic .recommend {
         width:60%;
     }
     .main-container {
@@ -1681,18 +1713,18 @@ sub {
     }
 }
 
-@media only screen and (min-width:501px) and(max-width:800px)
+@media only screen and (min-width:501px) and(max-width:568px)
 {
     .flex-center .first-center {
         width: 45%;
 }
 
-@media only screen and (min-width:569px)and(max-width:800px)
+@media only screen and (min-width:569px)and(max-width:600px)
 {
     .plan-post{
         width:90%;
     }
-    .basic, .Premium, .pro {
+    .basic,  {
         width: 49%;
     }
     .blog-container .par-blog .blog-down .firstblog {
@@ -1701,7 +1733,7 @@ sub {
         margin-left: 10px;
 }
 
-@media only screen and (min-width:601px)and(max-width:800px)
+@media only screen and (min-width:601px)and(max-width:736px)
 {
     .search input {
         width: 53%;
