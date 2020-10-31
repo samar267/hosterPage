@@ -24,7 +24,6 @@ body {
 /*start header style*/
 .header {
     width:100%;    
-    border-bottom: .5px solid #e6ebff33;
 }
 
 .header-bar {
@@ -131,7 +130,7 @@ body {
     display: inline-block;
     font-size: 15px;
     line-height: 25px;
-    margin: 0px 15px;
+    margin: 0px 10px;
 }
 
 .navbar li span {
@@ -456,7 +455,6 @@ sub {
     font-size: 30px;
     line-height: 35px;
     color: #fff;
-    padding: 0 20px;
 }
 
 .search {
@@ -521,7 +519,7 @@ sub {
     font-weight: bold;
     text-align: center;
     position:relative;
-    left:35px;
+    padding-left: 70px;
 }
 
 .search p sub {
@@ -566,7 +564,6 @@ sub {
     padding: 30px 30px;
     margin:20px;
     background-color: rgba(114, 133, 246, 0.0313);
-    box-shadow: 0 0px 1px 0 rgba(77, 77, 119, 0.3);
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -575,7 +572,7 @@ sub {
 .first-center span {
     font-size: 30px;
     color: var(--theme-color);
-    line-height: 75px;
+    line-height: 70px;
 }
 
 .first-center .icon-center {
@@ -683,14 +680,14 @@ sub {
 .plan-container {
     width:100%;
     display:flex;
-    background-image:url(bubbles.png);
+    background-image: linear-gradient(to right, #f1f1f1, rgba(255, 255, 255, 0)), url(bubbles.png);
     background-color: rgb(244, 243, 250);
     background-size: cover;
     padding-top:35px;
 }
 
 .plan-post {
-    width:85%;
+    width:90%;
     margin:auto;
     display: flex;
     flex-direction: column;
@@ -711,7 +708,7 @@ sub {
 
 .basic {
     display:inline-block;
-    width:30%;
+    width:31%;
     height: 588px;
     padding: 20px 20px 30px;
     transition: 0.3s;
@@ -784,7 +781,7 @@ sub {
     top: -20px;
     left: 0;
     right: 0;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -992,8 +989,6 @@ sub {
 .client-container {
     width:100%;
     background-color:#051B35;
-    padding-bottom: 50px;
-    border-bottom: .5px solid  #949494;
     position:relative;
 }
 .client-container:after {
@@ -1037,8 +1032,8 @@ sub {
 }
 
 .client-down .say p { 
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 17px;
+    line-height: 26px;
     color: #484848;
 }
 
@@ -1078,7 +1073,7 @@ sub {
     background-attachment:fixed;
     background-position:center;
     position:relative;
-    padding:5.5rem 0;
+    padding:3.5rem 0;
 }
 
 .last-container .last {
@@ -1267,6 +1262,7 @@ sub {
 {
     .header-bar {
         width:100%;
+        flex-wrap: wrap;
     }
     .header .topHeader-left  {
         width:100%;
@@ -1500,6 +1496,9 @@ sub {
     .topMenu li {
         padding: 0;
     }
+    .header-bar {
+        flex-wrap: wrap;
+    }
     
     .header .topHeader-left  {
         width:100%;
@@ -1727,18 +1726,15 @@ sub {
 
 @media only screen and (min-width:481px)and (max-width:500px)
 {
-    .topMenu li {
-        padding: 0;
+    .header-bar {
+        width:auto;
+        flex-wrap: nowrap;
     }
     
     .header .topHeader-left  {
-        width:51%;
         margin:auto;
     }
-    .topHeader-left ul {
-        padding-left: 25px;
-        text-align: left;
-    }
+
     .fa {
         margin:0 4px;
     }
@@ -1746,11 +1742,6 @@ sub {
     .topMenu {
         margin:0;
         padding: 10px
-    }
-
-    .topHeader-right .topMenu li a {
-        display:inline;
-        padding:0;
     }
 
     .topHeader-right .topMenu li a .material-icons {
@@ -1824,7 +1815,7 @@ sub {
         line-height: 35px
     }     
     .search input {
-        width: 74%;
+        width: 75%;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
@@ -1958,32 +1949,24 @@ sub {
     }
 }
 
-@media only screen and (min-width:501px) and(max-width:568px)
+@media only screen and (min-width:501px) and (max-width:568px)
 {
-    .topMenu li {
-        padding: 0;
+    .header-bar {
+        width:auto;
+        flex-wrap: nowrap ;
+    }
+
+    .header .topHeader-left {
+        margin: auto;
     }
     
-    .header .topHeader-left  {
-        width:51%;
-        margin:auto;
-    }
-    .topHeader-left ul {
-        padding-left: 25px;
-        text-align: left;
-    }
     .fa {
-        margin:0 4px;
+        margin:0;
     }
 
     .topMenu {
         margin:0;
         padding: 10px
-    }
-
-    .topHeader-right .topMenu li a {
-        display:inline;
-        padding:0;
     }
 
     .topHeader-right .topMenu li a .material-icons {
@@ -2046,18 +2029,22 @@ sub {
     }
     .search {
         top:0;
+        text-align: center;
+        padding: 20px 20px 0;
     }
     .wrapper {
-        padding: 20px 0;
+        padding: 20px 10px;
         height: auto;
     }
     .wrapper h3 {
         width: 100%;
         font-size: 32px;
-        line-height: 35px
+        line-height: 35px;
+        margin-bottom: 0;
+        padding: 0 30px;
     }     
     .search input {
-        width: 74%;
+        width: 75%;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
@@ -2066,20 +2053,20 @@ sub {
         border-top-right-radius: 0px;
     }
     .search p {
-        left:0;
+        text-align: left;
     }
     .search button {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
-        width: 95%;
-        right: 11px;
+        width: 94%;
+        right: 2px;
         margin-top: 15px;
     }
     .wrapper-center {
         width: 100%;
     }
     .wrapper-center h3 {
-        margin-top:90px;
+        margin-top:60px;
     }
     .flex-center .first-center {
         width: 45%;
@@ -2189,33 +2176,21 @@ sub {
     .footer-list {
         width:50%;
     }
-
-@media only screen and (min-width:569px)and(max-width:600px)
+}
+@media only screen and (min-width:569px) and (max-width:600px)
 {
-    .topMenu li {
-        padding: 0;
+    .header-bar {
+        width:100%
     }
     
-    .header .topHeader-left  {
-        width:51%;
-        margin:auto;
-    }
     .topHeader-left ul {
         padding-left: 25px;
         text-align: left;
-    }
-    .fa {
-        margin:0 4px;
     }
 
     .topMenu {
         margin:0;
         padding: 10px
-    }
-
-    .topHeader-right .topMenu li a {
-        display:inline;
-        padding:0;
     }
 
     .topHeader-right .topMenu li a .material-icons {
@@ -2278,15 +2253,17 @@ sub {
     }
     .search {
         top:0;
+        text-align: center;
     }
     .wrapper {
-        padding: 20px 0;
+        padding: 20px 15px;
         height: auto;
     }
     .wrapper h3 {
         width: 100%;
         font-size: 32px;
-        line-height: 35px
+        line-height: 35px;
+        margin-bottom: 15px;
     }     
     .search input {
         width: 74%;
@@ -2298,20 +2275,21 @@ sub {
         border-top-right-radius: 0px;
     }
     .search p {
-        left:0;
+        text-align: left;
+        padding-left: 20px;
     }
     .search button {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
-        width: 95%;
-        right: 11px;
+        width: 92%;
+        right: 2px;
         margin-top: 15px;
     }
     .wrapper-center {
         width: 100%;
     }
     .wrapper-center h3 {
-        margin-top:90px;
+        margin-top:50px;
     }
     .flex-center .first-center {
         width: 45%;
@@ -2319,9 +2297,8 @@ sub {
         margin: 10px;
     }
     .server {
-        width:100%;
+        width:90%;
         margin:auto;
-        padding-top:30px;
         flex-direction: column-reverse
     }
     .server-left {
@@ -2331,9 +2308,7 @@ sub {
     .server-right {
         width:100%;
     }
-    .server-right img {
-        width:90%;
-    }
+
     .plan-post {
         width:100%;
         padding:0 16px;
@@ -2346,9 +2321,14 @@ sub {
         width:45%;
         margin:20px 10px;
     }
-    .plan-post .plan-down .center {
-        trasform:none;
+    .plan-down {
+        justify-content: space-between;
     }
+
+    .plan-post .plan-down .center {
+        transform:none;
+    }
+
     .plan-post .basic .recommend {
         width:60%;
     }
@@ -2386,17 +2366,19 @@ sub {
     .client-container .client h3 {
         font-size: 34px;
         line-height: 35px;
-        margin: 10px;
+        margin-bottom: 40px;
+        margin-top: 0;
     }
     .client-down {
         padding:0 16px;
     }
     .client-down .say {
         width: 100%;
-        margin: 10px auto;
+        margin: 10px 20px;
     }
     .last-container {
-        padding: 3.5rem 0;
+        padding: 1.5rem ;
+        padding-bottom: 50px;
     }
     .last-container .last {
         width: auto;
@@ -2421,39 +2403,29 @@ sub {
         width: 28%;
         left: -5px;
     }
+
+    .footer {
+        padding: 2.5rem 0;
+    }
     .footer-list {
         width:50%;
     }
 }
 
-@media only screen and (min-width:601px)and(max-width:667px)
-{
-    .topMenu li {
-        padding: 0;
-    }
-    
-    .header .topHeader-left  {
-        width:51%;
-        margin:auto;
+@media only screen and (min-width:601px) and (max-width:667px)
+{    
+    .header-bar {
+        width: 100%;
+        flex-wrap: nowrap;
     }
     .topHeader-left ul {
         padding-left: 25px;
-        text-align: left;
-    }
-    .fa {
-        margin:0 4px;
     }
 
     .topMenu {
         margin:0;
         padding: 10px
     }
-
-    .topHeader-right .topMenu li a {
-        display:inline;
-        padding:0;
-    }
-
     .topHeader-right .topMenu li a .material-icons {
         display:inline;
     }
@@ -2472,17 +2444,13 @@ sub {
     }
 
     .slideshow-container .first .slide-left {
-        width:90%;
+        width:85%;
         top:0;
     }
     .slideshow-container .right {
         bottom:19px;
     }
 
-    .slideshow-container h3 {
-        font-size: 34px;
-        line-height: 38px
-    }
     .slideshow-container p {
         font-size: 16px;
         line-height: 22px;
@@ -2518,13 +2486,15 @@ sub {
         padding-left:10px;
     }
     .wrapper {
-        padding: 20px 0;
+        padding: 50px 20px;
         height: auto;
     }
     .wrapper h3 {
         width: 100%;
         font-size: 32px;
-        line-height: 35px
+        line-height: 35px;
+        margin: 0;
+        padding-left: 10px
     }     
     .search input {
         width: 55%;
@@ -2537,7 +2507,8 @@ sub {
         top:0;
     }
     .search p {
-        left:0;
+        text-align: left;
+        padding-left:0;
     }
     .search button {
         border-top-right-radius: 5px;
@@ -2549,55 +2520,42 @@ sub {
     .wrapper-center {
         width: 100%;
     }
-    .wrapper-center h3 {
-        margin-top:90px;
-    }
+
     .flex-center .first-center {
-        width: 45%;
-        padding: 10px;
-        margin: 10px;
+        width: 42%;
     }
     .server {
-        width:100%;
-        margin:auto;
+        width:90%;
         padding-top:30px;
         flex-direction: column-reverse
     }
     .server-left {
         width:100%;
-        padding: 0 10px;
     }
-    .server-right {
-        width:100%;
-    }
-    .server-right img {
-        width:90%;
-    }
+
     .plan-post {
         width:100%;
         padding:0 16px;
     }
-    .plan-post .plan-up h3 {
-        font-size: 35px;
-        margin-bottom: 40px;
+    .plan-down {
+        justify-content: space-between;
     }
     .basic {
         width:45%;
         margin:20px 10px;
     }
     .plan-post .plan-down .center {
-        trasform:none;
+        transform:none;
     }
     .plan-post .basic .recommend {
         width:60%;
     }
     .main-container {
         width:100%;
+        padding-bottom: 30px;
     }
     .main-container .main h3 {
-        font-size: 35px;
         margin-top: 35px;
-        margin-bottom: 0;
     }
     .main-container .services .left-services {
         width:100%;
@@ -2611,31 +2569,40 @@ sub {
     .par-blog {
         width: 100%;
     }
+    .blog-container {
+        padding-bottom: 25px;
+    }
     .blog-container .par-blog .blog-down {
-        width:100%;
         padding:0 16px;
     }
     .blog-container .par-blog .blog-down .firstblog {
         width:45%;
         margin-bottom:45px;
     }
+    .client-container {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
     .client-container .client {
         width:100%;
     }
     .client-container .client h3 {
-        font-size: 34px;
-        line-height: 35px;
+        font-size: 38px;
+        line-height: 40px;
         margin: 10px;
+        margin-bottom: 20px;
     }
     .client-down {
-        padding:0 16px;
+        padding: 30px;
+        padding-bottom: 0;
     }
     .client-down .say {
         width: 100%;
         margin: 10px auto;
     }
     .last-container {
-        padding: 3.5rem 0;
+        padding: 3.5rem 1.5rem ;
     }
     .last-container .last {
         width: auto;
@@ -2652,43 +2619,33 @@ sub {
     }
     
     .last-container .last input {
-        width: 70%;
+        width: 75%;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
     .last-container .last button {
-        width: 28%;
-        left: -5px;
+        width: 24%;
     }
     .footer-list {
         width:50%;
     }
+    .footer {
+        padding: 2.5rem 1.5rem;
+    }
+    .support-container {
+        width: 100%;
+        margin: 0;
+    }
 }
-@media only screen and (min-width:668px) and(max-width:800px)
+@media only screen and (min-width:668px) and (max-width:800px)
 {
     .topMenu li {
-        padding: 0;
-    }
-    
-    .header .topHeader-left  {
-        width:51%;
-        margin:auto;
-    }
-    .topHeader-left ul {
-        padding-left: 25px;
-        text-align: left;
-    }
-    .fa {
-        margin:0 4px;
+        padding: 10px;
     }
 
     .topMenu {
         margin:0;
-        padding: 10px
-    }
-    .topHeader-right .topMenu li a {
-        display:inline;
-        padding:0;
+        padding: 10px;
     }
 
     .topHeader-right .topMenu li a .material-icons {
@@ -2708,17 +2665,13 @@ sub {
     }
 
     .slideshow-container .first .slide-left {
-        width:90%;
+        width:85%;
         top:0;
     }
     .slideshow-container .right {
-        bottom:19px;
+        top:200px;
     }
 
-    .slideshow-container h3 {
-        font-size: 34px;
-        line-height: 38px
-    }
     .slideshow-container p {
         font-size: 16px;
         line-height: 22px;
@@ -2734,19 +2687,17 @@ sub {
         
     }
     .slideshow-container .first .slide-right {
-        width: 70%;
-        right: 0;
+        width: 50%;
+
     }
     .slideshow-container .first .slide-right img {
         width:100%;
         z-index: -1;
         opacity: .3;
-        right: 100px;
         bottom: 55px;
     }
     .dot-container span {
         top: 395px;
-        left: 42%;
     }
     .search {
         top:0;
@@ -2754,13 +2705,15 @@ sub {
         padding-left:10px;
     }
     .wrapper {
-        padding: 20px 0;
+        padding: 30px ;
         height: auto;
     }
     .wrapper h3 {
         width: 100%;
-        font-size: 32px;
-        line-height: 35px
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 0;
+        padding-left: 15px
     }     
     .search input {
         width: 55%;
@@ -2773,7 +2726,8 @@ sub {
         top:0;
     }
     .search p {
-        left:0;
+        text-align: left;
+        padding-left: 0;
     }
     .search button {
         border-top-right-radius: 5px;
@@ -2784,19 +2738,15 @@ sub {
     }
     .wrapper-center {
         width: 100%;
+        margin-bottom: 30px;
     }
-    .wrapper-center h3 {
-        margin-top:90px;
-    }
+
     .flex-center .first-center {
-        width: 45%;
-        padding: 10px;
-        margin: 10px;
+        width: 40%;
+        padding: 30px;
+        margin: 15px;
     }
     .server {
-        width:100%;
-        margin:auto;
-        padding-top:30px;
         flex-direction: column-reverse
     }
     .server-left {
@@ -2804,18 +2754,17 @@ sub {
         padding: 0 10px;
     }
     .server-right {
-        width:100%;
+        width:90%;
     }
     .server-right img {
-        width:90%;
+        width:100%;
     }
     .plan-post {
         width:100%;
-        padding:0 16px;
+        padding:0 45px;
     }
     .plan-post .plan-up h3 {
-        font-size: 35px;
-        margin-bottom: 40px;
+        margin-top: 30px;
     }
     .basic {
         width:45%;
@@ -2824,17 +2773,20 @@ sub {
     .plan-post .basic .recommend {
         width:60%;
     }
+    .plan-down {
+        justify-content: space-between;
+    }
     .main-container {
         width:100%;
     }
     .main-container .main h3 {
-        font-size: 35px;
-        margin-top: 35px;
-        margin-bottom: 0;
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
     .main-container .services .left-services {
         width:100%;
     }
+
     .main-container .services .right-services {
         width:100%;
     }
@@ -2856,23 +2808,21 @@ sub {
         width:100%;
     }
     .client-container .client h3 {
-        font-size: 34px;
-        line-height: 35px;
-        margin: 10px;
+        font-size: 38px;
+        line-height: 40px;
+        margin: 20px;
+        margin-bottom: 30px;
     }
-    .client-down {
-        padding:0 16px;
-    }
+
     .client-down .say {
-        width: 100%;
-        margin: 10px auto;
+        width: 85%;
+        margin: 15px auto;
     }
     .last-container {
         padding: 3.5rem 0;
     }
     .last-container .last {
-        width: auto;
-        margin: auto;
+        width: 90%;
     }
     .last-container .last-up {
         width:auto;
@@ -2897,7 +2847,131 @@ sub {
         width:50%;
     }
 }
+@media only screen and (min-width:801px) and (max-width:879px) {
+    .server {
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:801px) and (max-width:950px)
+{
+    .navbar li {
+        display: none;
+    }
 
-@media only screen and (min-width:668px) and(max-width:800px)
+    .login-btn {
+        display: none
+    }
 
+    .navbar .menu-btn button {
+        display: block;
+        position: relative;
+        left: 260px;
+    }
+
+    .slideshow-container {
+        background-position-x: -147px;
+        background-size: cover;
+        background-position-y: 442px;
+        height: 436px;
+    }
+
+    .slideshow-container .first .slide-left {
+        width: 85%;
+        top: 0
+    }
+
+    .slideshow-container p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .slideshow-container .first .slide-right {
+        width: 50%;
+    }
+    .slideshow-container .first .slide-right img {
+        width: 100%;
+        z-index: -1;
+        opacity: .3;
+        bottom: 55px;
+    }
+
+    .dot-container span {
+        top: 395px;
+    }
+    .slideshow-container .right {
+        top: 200px
+    }
+    .wrapper {
+        padding: 30px 50px 0
+    }
+
+    .search input {
+        width: 34%;
+    }
+    .search select {
+        width: 90px
+    }
+    .search button  {
+        width: 130px;
+    }
+    .search p {
+        padding-left: 160px
+    }
+    .flex-center .first-center {
+        margin: 25px 15px;
+    }
+    
+    .plan-down {
+        justify-content: space-between;
+    }
+    .basic {
+        width: 48%;
+    }
+    .plan-post .center .recommend {
+        width: 60%;
+    }
+    .main-container {
+        padding-bottom: 30px;
+    }
+    .main-container .services .left-services {
+        width: 100%
+    }
+    .main-container .services .right-services {
+        width: 100%;
+    }
+}
+@media only screen and (min-width:951px) and (max-width:992px)
+{
+    .navbar li {
+        display: none
+    }
+    .login-btn {
+        display: none;
+    }
+    .navbar .menu-btn button {
+        display: block;
+        position: relative;
+        left: 320px;
+    }
+    .plan-down {
+        justify-content: space-between;
+    }
+    .basic {
+        width: 48%;
+    }
+    .plan-post .center .recommend {
+        width: 60%;
+    }
+    .main-container {
+        padding-bottom: 30px;
+    }
+    .main-container .services .left-services {
+        width: 100%
+    }
+    .main-container .services .right-services {
+        width: 100%;
+    }
+}
 /*end responsive part*/
